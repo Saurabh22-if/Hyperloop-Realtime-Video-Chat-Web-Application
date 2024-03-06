@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="/style.css">
+
+    <link rel="shortcut icon" href="/hyperloop-logo-head.png"/>
+    <title>Hyperloop Watch Party</title>
+</head>
+
+<body>
+    <main class="main">
+        <nav class="navigation">
+           <a href="/">
+            <img src="/hyperloop-logo-head.png" alt="">
+                <div class="texthol">
+                    <span>HYPERLOOP</span>
+                    <span class="under">WATCH PARTY</span>
+                </div>    
+            </a>
+            <button class="primary" id="getStartedBtnPreview">Get started</button>
+        </nav>
+
+        <div class="hero">
+            <h1 class="heading-1">
+                Browse the web and <br>
+                <span>watch together online</span>
+            </h1>
+
+            <p class="body-1-copy">
+                Enjoy movie night online with your long-distance partner, start a watch party with <br>good buddies, or hang out and binge anime with your best friend. 
+            </p>
+
+            <button class="cta" id="getStartedBtnMain">Get started</button>
+
+        </div>
+
+        <section class="preview-section">
+            <img class="preview" src="/template_vid.png"></img>
+            <p class="vid-caption">Starting a session on Hyperloop Watch Party</p>
+
+            <div class="info-1">
+                <img src="/screenshare_img.webp" alt="" id="imgtop">
+                <video muted autoplay="autoplay" id="vidbottom">
+                    <source src="/screenshare.mp4" type="video/mp4">
+                </video>
+
+                <div class="info1-content">
+                    <h1>Screenshare Content without Buffer</h1>
+                    <p> Elevate your digital conversations to new heights with Hyperloop Chat! Discover a world of seamless communication and collaboration like never before, Chat like you're in the same room. Our real-time messaging ensures your messages are delivered instantly, keeping your conversations flowing effortlessly.</p>
+                </div>
+            </div>
+
+            <div class="info-2">
+                <img src="/participate_img.webp" alt="" id="imgtop">
+                <video muted autoplay="autoplay" id="vidbottom">
+                    <source src="/hub.mp4" type="video/mp4">
+                </video>
+
+                <div class="info2-content">
+                    <h1>Everyone can participate</h1>
+                    <p> Pass around control and collaborate effortlessly. Hyperbeam Watch Party's multiplayer browsers are designed to be as simple to use as your standard web browser.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="conclusion">
+            <div class="images">
+                <img src="/bottom_layer_1.png" alt="" id="cta-layer-1" class="img1">
+            </div>
+
+            <div class="textcon">
+                <span class="headcon">Vaporize the Distance</span>
+                <p>Hyperloop Watch Party helps you stay close, even when you're apart. Try it for free!</p>
+                
+                <button class="cta" id="getStartedBtnConclusion">Get started</button>
+            </div>
+           
+        </section>
+
+        <footer class="footer">
+            <a href="/">
+                <img src="/hyperloop-logo-head.png" alt="">
+                    <div class="texthol">
+                        <p>HYPERLOOP</p>
+                        <span class="under">WATCH PARTY</span>
+                    </div>    
+            </a>
+
+            <div class="policy">
+                <span>Policies</span>
+                
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy</a>
+                <a href="#">Copyright</a>
+                
+                <p>© 2022 Hyperloop, Inc.</p>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            const getStartedButtonMain = document.getElementById("getStartedBtnMain");
+            const getStartedButtonPreview = document.getElementById("getStartedBtnPreview"); 
+            const getStartedButtonConclusion = document.getElementById("getStartedBtnConclusion");
+
+            
+                            // Event listener for "Get started" button in the main section
+            getStartedButtonMain.addEventListener("click", () => {
+                // Use an AJAX request to check the user's login status
+                fetch("/check-login", {
+                    method: "GET",
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.userIsLoggedIn) {
+                        // Redirect to the dashboard if the user is logged in
+                        window.location.href = "/dashboard";
+                    } else {
+                        // Redirect to the registration page if the user is not logged in
+                        window.location.href = "/register";
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                });
+            });
+
+            // Event listener for "Get started" button in the preview section
+            getStartedButtonPreview.addEventListener("click", () => {
+                // Use an AJAX request to check the user's login status
+                fetch("/check-login", {
+                    method: "GET",
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.userIsLoggedIn) {
+                        // Redirect to the dashboard if the user is logged in
+                        window.location.href = "/dashboard";
+                    } else {
+                        // Redirect to the registration page if the user is not logged in
+                        window.location.href = "/register";
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                });
+            });
+
+            // Event listener for "Get started" button in the conclusion section
+            getStartedButtonConclusion.addEventListener("click", () => {
+                // Use an AJAX request to check the user's login status
+                fetch("/check-login", {
+                    method: "GET",
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.userIsLoggedIn) {
+                        // Redirect to the dashboard if the user is logged in
+                        window.location.href = "/dashboard";
+                    } else {
+                        // Redirect to the registration page if the user is not logged in
+                        window.location.href = "/register";
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                });
+            });
+        });
+        
+        </script>
+    </main>
+</body>
+</html>

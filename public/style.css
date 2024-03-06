@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800&family=Jost:wght@200;300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(/hero_bg_alt.2cdc54a5.png) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /* border: 1px solid red; */
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.main{
+    background: linear-gradient(to bottom,#000c 0%,#000a 50%,#0008 100%);
+    display: block;
+}
+
+.main .navigation{ 
+    /* border: 1px solid black; */
+    height: 100px;
+    width: 100%;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+}
+
+.main .navigation a{ 
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.main .navigation a .texthol{ 
+    /* border: 1px solid blue; */
+    height: 65px;
+    width: 210px;
+}
+
+.main .navigation a .texthol span{ 
+    font-family: 'Gabarito', cursive;
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 10px;
+    letter-spacing: 3px;
+    color: #A785FE;
+}
+
+.main .navigation a .texthol .under{ 
+    font-family: 'Gabarito', cursive;
+    font-size: 17px;
+    font-weight: 600;
+    margin-left: 10px;
+    letter-spacing: 3px;
+    color: #ffffff;
+}
+
+.main .navigation a img{ 
+    height: 36px;
+    width: 36px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.main .navigation .primary{ 
+    height: 52px;
+    width: 126px;
+    font-family: 'Gabarito', cursive;
+    font-size: 19px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #ffffff48;
+    border: none;
+    position: absolute;
+    right: 4%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.main .navigation .primary:hover{ 
+    transition: .2s;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.main .hero{
+    /* border: 1px solid greenyellow; */
+    height: 600px;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding: 4rem;
+    text-align: center;
+}
+
+.main .hero .heading-1{
+    font-family: 'Gabarito', cursive;
+    font-size: 60px;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #ffffff;
+    margin-top: 70px;
+}
+
+.main .hero .heading-1 span{
+    color: #A785FE;
+}
+
+.main .hero .body-1-copy{
+    display: block;
+    margin-top: 30px;
+    font-family: 'Gabarito', cursive;
+    font-size: 1.375rem;
+    color: #ffffff;
+    opacity: 0.75;
+    
+}
+
+.main .hero .cta{
+    margin-top: 30px;
+    height: 57px;
+    width: 155px;
+    font-family: 'Gabarito', cursive;
+    font-size: 22px;
+    font-weight: 600;
+    color: #000000;
+    background-color: #A785FE;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.main .preview-section{
+    /* border: 1px solid red; */
+    height: 100%;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    
+}
+
+.main .preview-section .preview{
+    border: 2px solid #A785FE;
+    height: 657px;
+    max-width: 100%;
+    margin-bottom: 10px;
+    margin-left: 175px;
+    border-radius: 12px;
+}
+
+.main .preview-section .vid-caption{
+    font-family: 'Gabarito', cursive;
+    font-size: 1.125rem;
+    color: #ffffff;
+    opacity: 0.75;
+    text-align: center;
+    width: 100%;
+}
+
+.main .preview-section .info-1{ 
+    /* border: 1px solid yellow; */
+    margin-top: 70px;
+    height: 400px;
+    max-width: 1536px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.main .preview-section .info-1 video{
+    height: 85%;
+    margin-left: 0px;
+    border-radius: 10px;
+    right: 25px;
+}
+
+#vidbottom, #imgtop {
+    position: relative;
+}
+
+#vidbottom {
+    z-index: 8;
+}
+
+#imgtop{
+    z-index: 9;
+}
+
+.main .preview-section .info-1 img{ 
+    height: 200px;
+    width: 200px;
+    left: 145px;
+    top: 165px;
+}
+
+.main .preview-section .info-1 .info1-content{
+    /* border: 1px solid white; */
+    height: 85%;
+    width: 100%;
+    padding: 40px;
+    
+}
+
+.main .preview-section .info-1 .info1-content h1{
+    font-family: 'Gabarito', cursive;
+    font-size: 35px;
+    font-weight: 700;
+    margin-left: 10px;
+    color: #ffffff;
+}
+
+.main .preview-section .info-1 .info1-content p{
+    margin-top: 10px;
+    font-family: 'Gabarito', cursive;
+    font-size: 20px;
+    font-weight: 100;
+    margin-left: 10px;
+    word-spacing: 2px;
+    color: #ffffff9b;
+}
+
+.main .preview-section .info-2{
+    /* border: 1px solid yellow; */
+    margin-top: 85px;
+    height: 400px;
+    max-width: 1536px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.main .preview-section .info-2{
+    margin-top: 40px;
+    height: 400px;
+    max-width: 1536px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.main .preview-section .info-2 img{ 
+    height: 200px;
+    width: 200px;
+    left: 88.5%;
+    top: 165px;
+}
+
+.main .preview-section .info-2 video{ 
+    height: 85%;
+    margin-left: -117px;
+    border-radius: 10px;
+    left: 53.5%;
+}
+
+.main .preview-section .info-2 .info2-content{
+    /* border: 1px solid white; */
+    height: 85%;
+    width: 100%;
+    padding: 40px;
+    padding-top: 80px;
+    padding-right: 9%;
+    right: 36%;
+    position: relative;
+}
+
+.main .preview-section .info-2 .info2-content h1{
+    font-family: 'Gabarito', cursive;
+    font-size: 35px;
+    font-weight: 700;
+    margin-left: 10px;
+    color: #ffffff;
+}
+
+.main .preview-section .info-2 .info2-content p{
+    margin-top: 10px;
+    font-family: 'Gabarito', cursive;
+    font-size: 20px;
+    font-weight: 100;
+    margin-left: 10px;
+    word-spacing: 2px;
+    color: #ffffff9b;
+}
+
+.main .conclusion{
+    /* border: 1px solid red; */
+    height: 40vh;
+    width: 100%;
+    margin-bottom: 16rem;
+}
+.main .conclusion .images{
+    position: absolute;
+    z-index: 8;
+}
+
+.main .conclusion .images .img1{
+    top:100px;
+    position:absolute;
+    left: 1010px;
+}
+
+.main .conclusion .textcon{
+    position: relative;
+    z-index:9;
+    top:150px;
+    left: 25%;
+    align-items:center ;
+}
+
+.main .conclusion .textcon .headcon{
+    font-family: 'Gabarito', cursive;
+    font-size: 35px;
+    font-weight: 700;
+    margin-left: 243px;
+    color: #ffffff;
+}
+
+.main .conclusion .textcon p{
+    margin-top: 10px;
+    font-family: 'Gabarito', cursive;
+    font-size: 23px;
+    font-weight: 100;
+    margin-left: 10px;
+    word-spacing: 2px;
+    color: #ffffff9b;
+}
+
+.main .conclusion .textcon .cta{
+    margin-left: 18%;
+    margin-top: 10px;
+    height: 57px;
+    width: 155px;
+    font-family: 'Gabarito', cursive;
+    font-size: 22px;
+    font-weight: 600;
+    color: #000000;
+    background-color: #A785FE;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.main .footer{
+    background-color: #000000;
+    height: 53vh;
+    width: 100%;
+}
+
+.main .footer{
+    box-shadow: #A785FE 0px -100px 10rem;
+    padding-top: 60px;
+    position: relative;
+}
+
+.main .footer a img{
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.main .footer a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-left: 80px;
+}
+
+.main .footer a .texthol{
+    height: 65px;
+    width: 210px;
+}
+
+.main .footer a .texthol p{
+    font-family: 'Gabarito', cursive;
+    font-size: 35px;
+    font-weight: 600;
+    margin-left: 10px;
+    letter-spacing: 3px;
+    color: #A785FE;
+}
+
+.main .footer a .texthol .under{
+    font-family: 'Gabarito', cursive;
+    font-size: 17px;
+    font-weight: 600;
+    margin-left: 10px;
+    letter-spacing: 3px;
+    color: #ffffff;
+}
+
+.main .footer .policy{
+    padding-top: 50px;
+    color: #ffffff;
+    padding-left: 80px;
+}
+
+.main .footer .policy span{
+    font-family: 'Gabarito', cursive;
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+    margin-left: 80px;
+}
+
+.main .footer .policy a{
+    font-family: 'Gabarito', cursive;
+    font-size: 18px;
+    font-weight: 200;
+    color: #ffffff8d;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.main .footer .policy p{
+    font-family: 'Gabarito', cursive;
+    font-size: 18px;
+    font-weight: 200;
+    color: #ffffff8d;
+    margin-top: 40px;
+    margin-left: 80px;
+
+}
+

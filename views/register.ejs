@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/login.css">
+    <link rel="shortcut icon" href="/hyperloop-logo-head.png"/>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Hyperloop - A Better Way to Watch Together Online </title>
+</head>
+<body>
+    <div class="layout">
+        <div class="nav">
+            <a href="/">
+                <img src="/hyperloop-logo-head.png" alt="">
+                    <div class="texthol">
+                        <span>HYPERLOOP</span>
+                    </div>    
+                </a>
+        </div>
+
+        <div class="input_box">
+           <div class="inner-div">
+                <p class="reg-title">Create an account</p>
+                <p class="reg-title-2">What is your date of birth?</p>
+
+                <div class="input-fields">
+                    <form action="/register" method="post" onsubmit="submitForm(); return false;">
+                        <div id="validationMessage"></div>
+                            <input type="text" placeholder="Username" name="username" required>
+                            <input type="email" placeholder="Email" name="email" required>
+                            <input type="password" placeholder="Password" name="password" required>
+                            
+                            <button class="register-btn" type="submit" >Register Account</button>
+                    </form>
+                    <div class="create-acc">
+                        <span class="register-acc">Already have an account? <a href="/login">Log in here.</a></span>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </div>
+    <script>
+        function submitForm() {
+            var form = document.forms[0];
+            var username = form["username"].value;
+            var email = form["email"].value;
+            var password = form["password"].value;
+            var validationMessage = document.getElementById("validationMessage");
+    
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/register", true);
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        if (response.isValid) {
+                            // Registration successful
+                            alert("Registration successful!");
+                            form.reset();
+                            
+                        } else {
+                            // Show the validation message
+                            validationMessage.style.display = "block";
+                            validationMessage.textContent = response.message;
+                        }
+                    } else {
+                        alert("Error: " + xhr.status);
+                    }
+                }
+            };
+    
+            var data = {
+                username: username,
+                email: email,
+                password: password
+            };
+            xhr.send(JSON.stringify(data));
+        }
+    </script>
+    
+</body>
+</html>

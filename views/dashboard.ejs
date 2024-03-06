@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="/dashboard.css">
+    <link rel="shortcut icon" href="/hyperloop-logo-head.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4" crossorigin="anonymous"></script>
+    <title>Hyperloop - A Better Way to Watch Together Online</title>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Rooms Content -->
+        <div id="main-content-rooms" class="mainContent">
+
+            <div class="navbar">
+                <div class="leftNav">
+                    <div class="pageTitleContainer">
+                        <h3 class="pageTitle">Rooms</h3>
+                    </div>
+                </div>
+    
+                <div class="rightNav">
+                    <div class="navButtons">
+                        <div class="roomButtons">
+                            <a href="/login" class="primaryBtn">
+                                <span class="btn-content">
+                                    <i class="fa-solid fa-right-from-bracket fa-xl"></i>
+                                    <h3 class="btnCopy">Logout</h3>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-container">
+                <img src="/main-img.png" alt="">
+                <div class="mainpg-contents">
+                    <span class="head-main">Welcome! You aren't in any rooms yet</span>
+                    <p class="foot-main">Create or join a room to start browsing the web with others.</p>
+
+                    <button class="create-room" id="getInActionBtn"><i class="fa-solid fa-plus"></i>Get In Action</button>
+                </div>
+            </div>
+
+         </div>
+         <!-- Rooms content ends  -->
+
+         <!-- Friends content  -->
+         <div id="main-content-friends" class="mainContent">
+                <div class="navbar">
+                    <div class="leftNav">
+                        <div class="pageTitleContainer">
+                            <h3 class="pageTitle">Community</h3>
+                        </div>
+                    </div>
+                    
+
+                <div class="com-container">
+
+                    <div class="com-header">
+                        <p>Hyperloop Community</p>
+                    </div>
+
+                    <div class="com-content">
+                        <div class="content-1">
+                            <p>Welcome to the Hyperloop Community! We're thrilled to have you here. This is a space where Hyperloop users can connect, share ideas, and stay updated on the latest app developments. Join the conversation!</p>
+                        </div>
+                        <div class="content-1">
+                            <p>Learn more about Hyperloop and how it's transforming the way we communicate. Discover our mission, values, and the exciting features that make Hyperloop unique</p>
+                        </div>
+                        <div class="content-2">
+                            <img src="/com-img.png" alt="">
+                        </div>
+                        <div class="content-1">
+                            <p>Stay in the know about our latest features and updates. We regularly introduce new tools to enhance your chatting experience. Get a sneak peek at what's coming next</p>
+                        </div>
+                    
+                    </div>
+
+                </div>
+            </div>
+
+         </div>
+         <!-- friends content ends  -->
+
+         
+
+         <!-- help content  -->
+         <div id="main-content-help" class="mainContent">
+            <!-- Content for Help -->
+            <div class="navbar">
+                <div class="leftNav">
+                    <div class="pageTitleContainer">
+                        <h3 class="pageTitle">Help-Desk</h3>
+                    </div>
+                </div>
+
+                <div class="help-container">
+                    
+
+                    <div class="help-content">
+                        <div class="help-header">
+                            <p>Getting Started:</p>
+                        </div>
+                        <div class="content-1">
+                            <p>1. Welcome to the Hyperloop community! This guide will help you get started and make the most out of your experience.</p>
+                            <p>2. Learn how to create a Hyperloop account and join the world of seamless communication.</p>
+                            <p>3. Get back into your Hyperloop account quickly and easily with these steps.</p>
+                        </div>
+
+                        <div class="help-header">
+                            <p>User Profiles:</p>
+                        </div>
+                        <div class="content-1">
+                            <p>1. Customize your profile by adding a profile picture, changing your username, and sharing a little about yourself.</p>
+                            <p>2. Understand how to set your status and availability to let others know when you're online or away.</p>
+                            <p>3. Manage your privacy settings to control who can see your information and communicate with you.</p>
+                        </div>
+
+                        <div class="help-header">
+                            <p>Help and Support:</p>
+                        </div>
+                        <div class="content-1">
+                            <p>1. Find quick answers to common questions about Hyperloop in our FAQs.</p>
+                            <p>2. If you need assistance, our support team is here to help. Learn how to get in touch.</p>
+                        </div>
+
+                        <div class="content-2">
+                            <img src="/hyper-help.png" alt="">
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>  
+         </div>
+         <!-- help content ends  -->
+         <!-- Profile content -->
+         <div id="main-content-premium" class="mainContent">
+            <!-- Content for Premium -->
+            <div class="navbar">
+                <div class="leftNav">
+                    <div class="pageTitleContainer">
+                        <h3 class="pageTitle">Profile</h3>
+                    </div>
+                </div>
+        
+                <div class="profile-container" id="profileData">
+                    <div class="profile-header">
+                        <span>User Profile</span>
+                    </div>
+                    <div class="profile-content">
+                        <img id="profile-picture" src="/logo.png" alt="Profile Picture">
+                        <p><%= user.username %> <%= user.userId %></p>
+                        
+                    </div>
+                    <p class="email-dis">Email <br> 
+                        <span><%= user.email %></span>
+                    </p>
+
+                    <form id="profile-update-form">
+                        <div class="edit-account">
+                            <div class="username">
+                                <p>Enter New Username</p>
+                                <input type="text" placeholder="Change Username" name="newUsername">
+                            </div>
+                            <div class="email">
+                                <p>Enter New Email</p>
+                                <input type="email" placeholder="Change Email" name="newEmail">
+                            </div>
+                                
+                            <!-- Add a checkbox for updating the password -->
+                            <div class="update-password">
+                                <label for="updatePassword">Update Password</label>
+                                <input type="checkbox" id="updatePassword" name="updatePassword">
+                            </div>
+                            
+                            <div class="password-fields" id="passwordFields">   
+                                <!-- Password fields -->
+                                <div class="current-password">
+                                    <p>Enter Current Password</p>
+                                    <input type="password" name="currentPassword" placeholder="Current Password">
+                                </div>
+                                <div class="new-password">
+                                    <p>Enter New Password</p>
+                                    <input type="password" name="newPassword" placeholder="New Password">
+                                </div>
+                                <div class="confirm-password">
+                                    <p>Confirm New Password</p>
+                                    <input type="password" name="confirmPassword" placeholder="Confirm New Password">
+                                </div>
+                            </div>
+                            
+                            <button type="submit">Update Profile</button>
+                        </div>
+                    </form>
+                    <div class="images" id="images-tab">
+                        <img src="/desktop-only.png" alt="">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+         
+         <!-- Profile content ends  -->
+        
+        <div class="sidebar">
+            <button class="rooms">
+                <img src="/hyperloop-logo-dash.png" alt="" title="Rooms">
+            </button>
+
+            <button href="#" class="friends">
+                <i class="fa-solid fa-user-group fa-xl f-icon" style="color: #ababab;" title="Friends"></i>
+            </button>
+            <div class="sidebar-options">
+                
+    
+                <button href="#" class="help">
+                    <i class="fa-solid fa-circle-question fa-xl h-icon" style="color: #ababab;" title="Help"></i>
+                </button>
+                <button href="#" class="premium">
+                    <img src="/logo.png" alt="">
+                </button>
+    
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <script src="/dashscript.js"></script>
+</body>
+</html>

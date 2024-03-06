@@ -1,0 +1,792 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800&family=Jost:wght@200;300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainContent {
+    display: none;
+ }
+ 
+ #main-content-rooms {
+    display: block;
+ }
+
+.dashboard .mainContent{
+    /* border: 1px solid blue; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 72px;
+    z-index: 180;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #17181c;
+    display: flex;
+}
+
+.dashboard .navbar{
+    /* border: 1px solid red; */
+    background-color: #17181c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    padding: 0 12px 0 0;
+    width: 100%;
+    z-index: 150;
+}
+
+.dashboard .sidebar{
+    /* border: 1px solid yellow; */
+    position: relative;
+    top: 0;
+    z-index: 350;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 72px;
+    height: 100vh;
+    padding-top: 8px;
+    padding-bottom: 2px;
+    background-color: #17181c;
+}
+
+.dashboard .navbar .leftNav{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.dashboard .navbar .leftNav .pageTitleContainer{
+    display: flex;
+    max-width: 360px;
+    margin-right: auto;
+    margin-left: 12px;
+    padding: 0 12px;
+    overflow: hidden;
+}
+
+.dashboard .navbar .leftNav .pageTitleContainer .pageTitle{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    font-family: 'Gabarito', cursive;
+    font-weight: 200;
+    color: #fff;
+}
+
+.dashboard .navbar .rightNav{
+    display: flex;
+    align-items: center;
+    height: 72px;
+}
+
+.dashboard .navbar .rightNav .navButtons{
+    display: flex;
+    padding: 0 4px;
+}
+
+.dashboard .navbar .rightNav .navButtons .roomButtons{
+    align-items: center;
+}
+
+.dashboard .navbar .rightNav .navButtons .roomButtons .primaryBtn{
+    text-decoration: none;
+    font-family: 'Gabarito', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    margin: 0 6px;
+    padding: 0 14px 0 12px;
+    white-space: nowrap;
+    border-radius: 4px;
+    color: #000;
+    background-color: #a888ff;
+    border: none;
+    cursor: pointer;
+}
+
+.dashboard .navbar .rightNav .navButtons .roomButtons .secondaryBtn{
+    text-decoration: none;
+    font-family: 'Gabarito', cursive;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    width: 110px;
+    margin: 0 6px;
+    padding: 0 14px 0 12px;
+    white-space: nowrap;
+    border-radius: 4px;
+    color: #000;
+    background-color: #a888ff;
+    border: none;
+    cursor: pointer;
+}
+
+.dashboard .navbar .rightNav .navButtons .roomButtons .secondaryBtn .btn-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.dashboard .navbar .rightNav .navButtons .roomButtons .secondaryBtn .btn-content i{
+    color: #000;
+    height: 10px;
+    width: 10px;
+    margin-right: 18px;
+    margin-top: 8px;
+}
+
+.dashboard .navbar .rightNav .navButtons .roomButtons .secondaryBtn:hover{
+    background-color: #b99ffe;
+}
+.dashboard .navbar .rightNav .navButtons .roomButtons .primaryBtn:hover{
+    background-color: #b99ffe;
+}
+
+.dashboard .navbar .rightNav .navButtons .roomButtons .primaryBtn .btn-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.dashboard .navbar .rightNav .navButtons .roomButtons .primaryBtn .btn-content i{
+    color: #000;
+    height: 10px;
+    width: 10px;
+    margin-right: 18px;
+    margin-top: 8px;
+}
+
+.dashboard .navbar .rightNav .navButtons .roomButtons .primaryBtn .btnCopy{
+    color: #000;
+    font-family: 'Gabarito', cursive;
+    font-size: 17px;
+    font-weight: 200;
+}
+
+.dashboard .sidebar .rooms{
+    max-width: 35px;
+    max-height: 35px;
+    margin-top: 12px;
+    margin-left: 2px;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+.dashboard .sidebar .rooms img{
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 12px;
+}
+
+.dashboard .sidebar .friends{
+    cursor: pointer;
+    display: block;
+    width: 68px;
+    height: 44px;
+    margin-top: 8px;
+    margin-left: 2px;
+    padding-top:20px;
+    background: transparent;
+    border: none;
+}
+
+.dashboard .sidebar .friends .f-icon{
+    margin-top: 20px;
+    margin-left: 2px;
+}
+
+.dashboard .sidebar .sidebar-options{
+    position: relative;
+    top: 75%;
+    
+}
+
+.dashboard .sidebar .sidebar-options .premium{
+    cursor: pointer;
+    display: block;
+    width: 68px;
+    height: 44px;
+    margin-top: 8px;
+    margin-left: 2px;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.dashboard .sidebar .sidebar-options .premium img{
+    height: 42px;
+    width: 42px;
+    margin-right: 2px;
+    border: 2px solid #a888ff;
+    border-radius: 100px;
+    margin-top: 14px;
+}
+
+.dashboard .sidebar .sidebar-options .help{
+    cursor: pointer;
+    display: block;
+    width: 68px;
+    height: 44px;
+    margin-top: 10px;
+    margin-left: 2px;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.dashboard .sidebar .sidebar-options .help .h-icon{
+    margin-top: 15px;
+    margin-left: 2px;
+}
+
+.dashboard .sidebar .sidebar-options .profile-container{
+    width: 70px;
+    height: 70px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    padding-top: 12px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.dashboard .sidebar .sidebar-options .profile-container img{
+    height: 42px;
+    width: 42px;
+    margin-right: 2px;
+    border: 2px solid #a888ff;
+    border-radius: 100px;
+    margin-top: 14px;
+}
+
+.dashboard .mainContent .main-container{
+    position: relative;
+    margin: auto;
+    margin-top: 14%;
+    padding-top: 46px;
+    height: 300px;
+    width: 460px;
+    /* border: 1px solid wheat; */
+}
+
+.dashboard .mainContent .com-container{
+    position: relative;
+    margin: auto;
+    margin-top: 7%;
+    height: 75vh;
+    width: 80%;
+    margin-left: 0px;
+    padding-left: 40px;
+    padding-top: 40px;
+    /* border: 1px solid wheat; */
+    border-radius: 20px;
+    background-color: #24262c;
+    padding-right: 40px;
+}
+
+.dashboard .mainContent .com-container .com-header{
+    height: 50px;
+    width: 100%;
+    /* border: 1px solid red; */
+    align-items: center;
+    display: flex;
+}
+
+.dashboard .mainContent .com-container .com-content{
+    height: 80vh;
+    width: 100%;
+    /* border: 1px solid blue; */
+}
+.dashboard .mainContent .com-container .com-content .content-1{
+    height: 90px;
+    width: 100%;
+    /* border: 1px solid yellow; */
+    margin-top: 10px;
+    
+}
+
+.dashboard .mainContent .com-container .com-content .content-1 p{
+    font-family: 'Gabarito', cursive;
+    font-size: 20px;
+    font-weight: 200;
+    color: #ffffff9e;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+.dashboard .mainContent .com-container .com-content .content-2 img{
+    height: 315px;
+    width: 70%;
+    border: 2px solid #a888ff;
+    border-radius: 30px;
+    margin-left: 170px;
+    margin-bottom: 20px;
+}
+
+.dashboard .mainContent .com-header p{
+    font-family: 'Gabarito', cursive;
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.dashboard .mainContent .help-container{
+    position: relative;
+    margin: auto;
+    margin-top: 7%;
+    height: 130vh;
+    width: 80%;
+    margin-left: 0px;
+    padding-left: 40px;
+    padding-top: 40px;
+    /* border: 1px solid wheat; */
+    border-radius: 20px;
+    background-color: #24262c;
+    padding-right: 40px;
+}
+
+.dashboard .mainContent .help-container .help-content .help-header{
+    height: 50px;
+    width: 100%;
+    /* border: 1px solid red; */
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+}
+
+.dashboard .mainContent .help-container .help-content .help-header p{
+    font-family: 'Gabarito', cursive;
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.dashboard .mainContent .help-container .help-content .content-2 img{
+    height: 615px;
+    width: 70%;
+    border: 2px solid #a888ff;
+    border-radius: 30px;
+    margin-left: 170px;
+    margin-bottom: 20px;
+}
+
+.dashboard .mainContent .help-container .help-content{
+    height: 80vh;
+    width: 100%;
+    /* border: 1px solid blue; */
+}
+
+.dashboard .mainContent .help-container .help-content .content-1{
+    height: 90px;
+    width: 100%;
+    /* border: 1px solid yellow; */
+    margin-top: 10px; 
+}
+
+.dashboard .mainContent .help-container .help-content .content-1 p{
+    font-family: 'Gabarito', cursive;
+    font-size: 20px;
+    font-weight: 200;
+    color: #ffffff9e;
+    padding-right: 40px;
+    padding-left: 40px;
+    margin-top: 10px;
+}
+
+.dashboard .mainContent .profile-container{
+    position: relative;
+    margin: auto;
+    margin-top: 7%;
+    height: 75vh;
+    width: 80%;
+    margin-left: 0px;
+    padding-left: 40px;
+    padding-top: 40px;
+    /* border: 1px solid wheat; */
+    border-radius: 20px;
+    background-color: #24262c;
+    padding-right: 40px;
+}
+
+.dashboard .mainContent .profile-container .profile-header{
+    height: 50px;
+    width: 100%;
+    /* border: 1px solid red; */
+    align-items: center;
+    display: flex;
+}
+
+
+.dashboard .mainContent .main-container img{
+    margin-left: 40px;
+}
+.dashboard .mainContent .main-container .mainpg-contents{
+    height: 150px;
+    width: 100%;
+    /* border: 1px solid greenyellow; */
+}
+
+.dashboard .mainContent .main-container .mainpg-contents .head-main{
+    font-size: 20px;
+    font-family: 'Gabarito', cursive;
+    font-weight: 200;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard .mainContent .main-container .mainpg-contents .create-room{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    width: 150px;
+    margin: 0 146px;
+    padding: 0 14px 0 12px;
+    white-space: nowrap;
+    border-radius: 4px;
+    color: #000;
+    background-color: #a888ff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.dashboard .mainContent .main-container .mainpg-contents .foot-main{
+    font-size: 17px;
+    font-family: 'Gabarito', cursive;
+    font-weight: 200;
+    color: #ffffff83;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+#profileData{
+     height: 85vh;
+     width: 50%;
+     /* border: 1px solid red; */
+}
+
+#profileData .profile-header{
+    height: 50px;
+    width: 100%;
+    /* border: 1px solid red; */
+    align-items: center;
+    display: flex;
+}
+
+#profileData .profile-header span{
+    font-family: 'Gabarito', cursive;
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+#profileData .profile-content{
+    display: flex;
+}
+
+#profileData .profile-content img{
+    height: 60px;
+    width: 60px;
+    border: 2px solid #a888ff;
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#profileData .profile-content p{
+    font-family: 'Gabarito', cursive;
+    font-size: 18px;
+    font-weight: 200;
+    color: #ffffff;
+    margin-top: 24px;
+    margin-left: 15px;
+}
+
+#profileData .edit-account{
+    height: auto;
+    width: 100%;
+    /* border: 1px solid blue; */
+}
+#profileData .edit-account .username{
+    height: auto;
+    width: 100%;
+    /* border: 1px solid yellow; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#profileData .edit-account .username p{
+    font-family: 'Gabarito', cursive;
+    font-size: 18px;
+    font-weight: 200;
+    color: #ffffff80;
+    margin-bottom: 5px;
+}
+
+#profileData .edit-account .username input{
+    height: 40px;
+    width: 250px;
+    border: 1px solid #ffffff2f;
+    background-color: #ededed16;
+    border-radius: 3px;
+}
+
+#profileData .edit-account .username input[type="text"] {
+    font-family: 'Gabarito', cursive;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 5px;
+  }
+
+#profileData .edit-account .username input::placeholder{
+    padding-left: 10px;
+    color: #ffffff72;
+    font-weight: 200;
+    font-size: 15px;
+}
+#profileData .edit-account .email{
+    height: auto;
+    width: 100%;
+    /* border: 1px solid yellow; */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#profileData .edit-account .email p{
+    font-family: 'Gabarito', cursive;
+    font-size: 18px;
+    font-weight: 200;
+    color: #ffffff80;
+    margin-bottom: 5px;
+}
+#profileData .edit-account .email .email-dis{
+    font-family: 'Gabarito', cursive;
+    font-size: 15px;
+    font-weight: 200;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+#profileData .edit-account .email input{
+    height: 40px;
+    width: 250px;
+    border: 1px solid #ffffff2f;
+    background-color: #ededed16;
+    border-radius: 3px;
+}
+#profileData .edit-account .email input[type="email"] {
+    font-family: 'Gabarito', cursive;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 5px;
+  }
+
+#profileData .edit-account .email input::placeholder{
+    padding-left: 10px;
+    color: #ffffff72;
+    font-weight: 200;
+    font-size: 15px;
+}
+
+#profileData .edit-account button{
+    font-family: 'Gabarito', cursive;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    width: 110px;
+    padding: 0 14px 0 12px;
+    white-space: nowrap;
+    border-radius: 4px;
+    color: #000;
+    background-color: #a888ff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#profileData .edit-account .update-password{
+    height: 30px;
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+}
+
+#profileData .edit-account .update-password label{
+    font-family: 'Gabarito', cursive;
+    font-size: 15px;
+    font-weight: 200;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+#profileData p{
+    font-family: 'Gabarito', cursive;
+    font-size: 16px;
+    font-weight: 200;
+    color: #ffffffa1;
+    margin-bottom: 22px;
+    margin-top: 10px;
+}
+
+#profileData p span{
+    font-family: 'Gabarito', cursive;
+    font-size: 18px;
+    font-weight: 200;
+    color: #ffffff;
+    margin-bottom: 22px;
+    margin-top: 10px;
+}
+
+#updatePassword{
+    border-radius: 50px;
+    margin-bottom: 5px;
+    margin-left: 7px;
+}
+
+#passwordFields{
+    height: auto;
+    width: 100%;
+    /* border: 1px solid green; */
+}
+
+#passwordFields .current-password{
+    height: auto;
+    width: 100%;
+    /* border: 1px solid blue; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#passwordFields .current-password p{
+    font-family: 'Gabarito', cursive;
+    font-size: 18px;
+    font-weight: 200;
+    color: #ffffff80;
+    margin-bottom: 5px;
+}
+
+#passwordFields .current-password input{
+    height: 40px;
+    width: 250px;
+    border: 1px solid #ffffff2f;
+    background-color: #ededed16;
+    border-radius: 3px;
+}
+
+#passwordFields .current-password input::placeholder{
+    padding-left: 10px;
+    color: #ffffff72;
+    font-weight: 200;
+    font-size: 15px;
+}
+
+#passwordFields .current-password input[type="password"] {
+    font-family: 'Gabarito', cursive;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 5px;
+  }
+#passwordFields .new-password{
+    height: auto;
+    width: 100%;
+    /* border: 1px solid blue; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#passwordFields .new-password p{
+    font-family: 'Gabarito', cursive;
+    font-size: 18px;
+    font-weight: 200;
+    color: #ffffff80;
+    margin-bottom: 5px;
+}
+
+#passwordFields .new-password input{
+    height: 40px;
+    width: 250px;
+    border: 1px solid #ffffff2f;
+    background-color: #ededed16;
+    border-radius: 3px;
+}
+#passwordFields .new-password input[type="password"] {
+    font-family: 'Gabarito', cursive;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 5px;
+  }
+
+#passwordFields .new-password input::placeholder{
+    padding-left: 10px;
+    color: #ffffff72;
+    font-weight: 200;
+    font-size: 15px;
+}
+#passwordFields .confirm-password{
+    height: auto;
+    width: 100%;
+    /* border: 1px solid blue; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#passwordFields .confirm-password p{
+    font-family: 'Gabarito', cursive;
+    font-size: 18px;
+    font-weight: 200;
+    color: #ffffff80;
+    margin-bottom: 5px;
+}
+
+#passwordFields .confirm-password input{
+    height: 40px;
+    width: 250px;
+    border: 1px solid #ffffff2f;
+    background-color: #ededed16;
+    border-radius: 3px;
+}
+
+#passwordFields .confirm-password input[type="password"] {
+    font-family: 'Gabarito', cursive;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+#passwordFields .confirm-password input::placeholder{
+    padding-left: 10px;
+    color: #ffffff72;
+    font-weight: 200;
+    font-size: 15px;
+}
+
+#images-tab img{
+    position: absolute;
+    bottom: 10px;
+    top: 1px;
+    right: 0;
+    left: 368px;
+}

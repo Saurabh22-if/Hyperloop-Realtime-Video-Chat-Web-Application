@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800&family=Jost:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#validationMessage{
+    font-size: 15px;
+    font-weight: 200;
+    margin-left: 10px;
+    color: #00eeff;
+    font-family: 'Gabarito', cursive;
+    margin-top: 10px;
+    display: none;
+}
+
+#loginMessage{
+    font-size: 15px;
+    font-weight: 200;
+    margin-left: 10px;
+    color: #00eeff;
+    font-family: 'Gabarito', cursive;
+    margin-top: 10px;
+    display: none;
+}
+
+.layout{
+    background-color: #1e1f25;
+    /* border: 1px solid red; */
+    height: 100vh;
+    width: 100%;
+}
+
+.layout .nav{
+    height: 85px;
+    width: 100%;
+    padding-left: 50px;
+    padding-top: 20px;
+    position: relative;
+}
+
+.nav:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 15px;
+    width: 94%;
+    border-bottom: 2px solid #ffffff15;
+  }
+
+.layout .nav a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+} 
+
+.layout .nav a img{ 
+    height: 40px;
+    width: 40px;
+}
+
+.layout .nav a .texthol span{
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-left: 10px;
+    color: #A785FE;
+    font-family: 'Gabarito', cursive;
+
+}
+
+.layout .input_box{
+    /* border: 1px solid red; */
+    height: 510px;
+    width: 465px;
+    top: 45%;
+    left: 50%;
+    margin-top: -9em;
+    margin-left: -15em;
+    position: fixed;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+.layout .input_box .header{
+    font-size: 30px;
+    font-weight: 200;
+    margin-left: 10px;
+    color: #ffffff;
+    font-family: 'Gabarito', cursive;
+    
+}
+.layout .input_box p{
+    font-size: 22px;
+    font-weight: 200;
+    margin-left: 10px;
+    color: #ffffff94;
+    font-family: 'Gabarito', cursive;
+    margin-top: 10px;
+}
+.layout .input_box .input-fields{
+    padding-bottom: 50px;
+}
+
+.layout .input_box .input-fields input{
+    margin-left: 12px;
+    margin-top: 20px;
+    height: 45px;
+    width: 90%;
+    border: 1px solid #ffffff2f;
+    background-color: #ededed16;
+    border-radius: 3px;
+}
+.layout .input_box .input-fields input[type="email"] {
+    font-family: 'Gabarito', cursive;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 5px;
+  }
+.layout .input_box .input-fields input[type="password"] {
+    font-family: 'Gabarito', cursive;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 5px;
+  }
+
+.layout .input_box .input-fields input::placeholder{
+    padding-left: 10px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.layout .input_box a {
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.layout .input_box a span{
+    font-size: 16px;
+    font-weight: 200;
+    margin-left: 10px;
+    color: #A785FE;
+    font-family: 'Gabarito', cursive;
+}
+
+.layout .input_box a span:hover{
+    color: #bda5fd;
+}
+
+.layout .input_box .login-btn{
+    margin-left: 45%;
+    height: 45px;
+    width: 70px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-weight: 200;
+    color: #000000;
+    font-family: 'Gabarito', cursive;
+    background-color: #A785FE;
+    cursor: pointer;
+}
+
+.layout .input_box .create-acc{
+    margin-top: 20px;
+    width: 94%;
+    border-top: 2px solid #ffffff2a;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.layout .input_box .create-acc .register-acc{
+    margin-top: 10px;
+    font-size: 16px;
+    margin-left: 10px;
+    color: #ffffff99;
+    font-family: 'Gabarito', cursive;
+}
+
+.layout .input_box .create-acc .register-acc a{
+    font-size: 16px;
+    color: #00c3ff;
+    font-family: 'Gabarito', cursive;
+}
+
+/* Registration UI code */
+
+.layout .input_box .inner-div{
+    /* border: 1px solid greenyellow; */
+    height: 90%;
+    width: 100%;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.layout .input_box .inner-div .reg-title{
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.layout .input_box .inner-div .reg-title-2{
+    font-size: 16px;
+    color: #ffffffb6;
+}
+
+.layout .input_box .inner-div input{
+    margin-left: 12px;
+    margin-top: 20px;
+    height: 45px;
+    width: 90%;
+    border: 1px solid #ffffff2f;
+    background-color: #ededed16;
+    border-radius: 3px;
+}
+
+.layout .input_box .inner-div input[type="date"]{
+    background-color: #ededed16;
+    padding: 15px;
+    margin-top: 40px;
+    font-family: 'Gabarito', cursive;
+    color: #ffffff;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ffffff2f;
+
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.layout .input_box .inner-div .register-btn{
+    height: 50px;
+    width: 90%;
+    margin-left: 10px;
+    margin-top: 22px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-weight: 200;
+    color: #000000;
+    font-family: 'Gabarito', cursive;
+    background-color: #A785FE;
+    cursor: pointer;
+}
