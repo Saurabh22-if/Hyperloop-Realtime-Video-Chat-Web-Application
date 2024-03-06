@@ -9,8 +9,8 @@ npm (Node Package Manager)
 MongoDB**
 
 <h2>Getting Started</h2>
-**Clone the Repository** - git clone https://github.com/Saurabh22-if/Hyperloop-Realtime-Video-Chat-Web-Application.git
-**Install Dependencies** - npm install
+Clone the Repository - git clone https://github.com/Saurabh22-if/Hyperloop-Realtime-Video-Chat-Web-Application.git
+<h6>Install Dependencies - npm install</h6>
 
 <h2>Set Up MongoDB:</h2>
 Ensure MongoDB is running on your local machine or configure the application to connect to a MongoDB instance.
@@ -22,6 +22,6 @@ Screen sharing.
 User authentication and authorization.
 Contributions are welcome!
 
-Kudos to Traversy Media for helping me out with the video conference basics - https://youtu.be/QsH8FL0952k
-Happy chatting!🚀
+<h5>Kudos to Traversy Media for helping me out with the video conference basics - https://youtu.be/QsH8FL0952k</h5>
+<h5>Happy chatting!🚀</h5>
 \
